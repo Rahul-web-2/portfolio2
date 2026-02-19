@@ -1,7 +1,10 @@
 export const INTRO = {
   greeting: "Hi, I am",
   name: "Rahul Lakhchaura",
-  role: "Full Stack Developer",
+  role: "Full Stack",
+  role2: "Developer",
+  para: "Specialize in Front-End (React)",
+  para2: "and Backend (Spring Boot)"
 };
 
 export const SOCIAL_LINKS = [

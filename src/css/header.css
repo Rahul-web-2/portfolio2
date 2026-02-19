@@ -1,7 +1,6 @@
-*{ box-sizing: border-box; }
 .site-header {
     width: 100%;
-    padding: 20px 40px;
+    margin: 40px;
 }
 
 .header-container {
@@ -43,7 +42,7 @@
     transition: 0.3s ease;
 }
 
-.button:hover {
+.resume-button:hover {
     transform: scale(1.05);
 }
 

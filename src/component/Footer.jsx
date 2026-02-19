@@ -10,9 +10,9 @@ const SOCIALS = [
 export default function Footer() {
     return (
 
-        <footer aria-label="Site footer">
+        <footer className="Site footer">
 
-            <div className="footer-inner">
+            <div className="footer-container">
 
                 <div className="logo">
                     <p className="footer-logo">{OWNER_NAME}</p>
