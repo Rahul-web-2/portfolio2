@@ -1,4 +1,4 @@
-import { ABOUT } from "../data/aboutData";
+import { ABOUT } from "../data/aboutData.js";
 import '../css/about.css'
 import coding2 from "../assets/img/Coding2.png";
 

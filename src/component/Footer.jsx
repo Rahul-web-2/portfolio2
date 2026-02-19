@@ -1,4 +1,4 @@
-import { OWNER_NAME, NAV_LINKS, CURRENT_YEAR, SOCIAL_LINKS } from "../data/footerData";
+import { OWNER_NAME, NAV_LINKS, CURRENT_YEAR, SOCIAL_LINKS } from "../data/footerData.js";
 import github from "../assets/img/GitHub.png";
 import linkedin from "../assets/img/linkedin.png";
 import "../css/footer.css";

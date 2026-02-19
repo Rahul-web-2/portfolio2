@@ -1,7 +1,7 @@
-import '../css/project.css'
-import { projects, tabs } from '../data/projectData';
-import ProjectCard from './projectCard';
 import { useState, useMemo } from 'react';
+import { projects, tabs } from '../data/projectData.js';
+import ProjectCard from './projectCard';
+import '../css/project.css'
 
 export default function Project() {
     const [active, setActive] = useState("All");

@@ -1,4 +1,4 @@
-import { NAV_LINKS, OWNER_NAME, RESUME_PATH } from "../data/navbarData";
+import { NAV_LINKS, OWNER_NAME, RESUME_PATH } from "../data/navbarData.js";
 import '../css/navbar.css'
 
 export default function Navbar() {

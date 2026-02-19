@@ -1,4 +1,4 @@
-import { INTRO, SOCIAL_LINKS } from "../data/introData";
+import { INTRO, SOCIAL_LINKS } from "../data/introData.js";
 import github from "../assets/img/GitHub.png";
 import linkedin from "../assets/img/linkedin.png";
 import coding from "../assets/img/Coding.png";
