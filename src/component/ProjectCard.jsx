@@ -1,20 +1,49 @@
+import PropTypes from "prop-types";
+
 export default function ProjectCard({ project }) {
-    return (
-        <div>
-            <div className="project-card">
-                {project.image ? (
-                    <img
-                        src={project.image}
-                        alt={project.alt || project.title}
-                        loading="lazy" 
-                    />
-                ) : null}
-                <h3>{project.title}</h3>
-                <p>{project.category}</p>
-                <p>{project.description}
-                    <a href={project.link} target='_blank' rel="noreferrer">Read more</a>
-                </p>
-            </div>
-        </div>
-    )
+  const { title, category, description, image, alt, link } = project;
+
+  return (
+    <article className="project-card">
+      {image && (
+        <img
+          src={image}
+          alt={alt || title}
+          loading="lazy"
+          width={400}
+          height={250}
+        />
+      )}
+
+      <span className="project-category">{category}</span>
+
+      <h3>{title}</h3>
+
+      <p className="project-description">{description}</p>
+
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          className="project-link"
+          aria-label={`Read more about ${title} (opens in new tab)`}
+        >
+          Read more
+        </a>
+      )}
+
+    </article>
+  );
 }
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    alt: PropTypes.string,
+    link: PropTypes.string,
+  }).isRequired,
+};

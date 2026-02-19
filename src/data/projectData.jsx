@@ -1,14 +1,14 @@
 import portfolio from "../assets/img/portfolio.png";
 export const tabs = ["All", "Full Stack", "Front-end", "UI/UX"];
 
-const projects = [
+export const projects = [
     {
         id: 1,
         title: "My Portfolio!",
         description:
             "Welcome to my personal portfolio. This repository shows my projects, skills, and experience in various fields. Feel free to explore and learn more about my work.",
         category: "Front-end",
-        image:portfolio,
+        image: portfolio,
         alt: "ABC",
         link: "https://github.com/Rahul-web-2/portfolio/blob/main/README.md",
     },
@@ -59,4 +59,3 @@ const projects = [
         link: "https://github.com/Rahul-web-2/To-Do-App/blob/main/README.md",
     }
 ];
-export default projects;

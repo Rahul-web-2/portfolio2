@@ -1,50 +1,57 @@
-import '../css/footer.css';
+import { OWNER_NAME, NAV_LINKS, CURRENT_YEAR, SOCIAL_LINKS } from "../data/footerData";
 import github from "../assets/img/GitHub.png";
 import linkedin from "../assets/img/linkedin.png";
+import "../css/footer.css";
 
-const socials = [
-        { href: "https://github.com/Rahul-web-2", src: github, alt: "GitHub logo" },
-        { href: "https://www.linkedin.com/in/rahullakhchaura/", src: linkedin, alt: "LinkedIn logo" },
-    ];
-
+const SOCIALS = [
+    { ...SOCIAL_LINKS[0], src: github },
+    { ...SOCIAL_LINKS[1], src: linkedin },
+];
 export default function Footer() {
-
     return (
-        <footer>
-            <div className="footer">
+
+        <footer aria-label="Site footer">
+
+            <div className="footer-inner">
+
                 <div className="logo">
-                    <h1>Rahul Lakhchaura</h1>
+                    <p className="footer-logo">{OWNER_NAME}</p>
                 </div>
 
-                <div className="navbar">
+                <nav aria-label="Footer navigation">
                     <ul>
-                        <li className="home">
-                            <a href="#home" className="link-home">Home</a>
-                        </li>
-                        <li className="about">
-                            <a href="#about" className="link-about">About Me</a>
-                        </li>
-                        <li className="project">
-                            <a href="#project" className="link-project">Project</a>
-                        </li>
-                        <li className="contact">
-                            <a href="#contact-me" className="link-contact">Contact Me</a>
-                        </li>
+                        {NAV_LINKS.map(({ id, label, href }) => (
+                            <li key={id}>
+                                <a href={href} className="footer-link">
+                                    {label}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
-                </div>
-                <div className='social-media-icon'>
-                    {socials.map((social) => (
-                        <a key={social.href} href={social.href} target="_blank" rel="noreferrer">
-                            <img src={social.src} alt={social.alt} />
+                </nav>
+
+                <div className="social-media-icon" role="list" aria-label="Social media links">
+                    {SOCIALS.map(({ id, href, src, alt, ariaLabel }) => (
+                        <a
+                            key={id}
+                            href={href}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={ariaLabel}
+                            role="listitem"
+                        >
+                            <img src={src} alt={alt} width={32} height={32} />
                         </a>
                     ))}
                 </div>
 
-
                 <div className="copyright">
-                    <span>Copyright © 2026 - All rights reserved || Designed By: Rahul Lakhchaura</span>
+                    <span>
+                        Copyright &copy; {CURRENT_YEAR} · All rights reserved · Designed by {OWNER_NAME}
+                    </span>
                 </div>
+
             </div>
         </footer>
-    )
+    );
 }

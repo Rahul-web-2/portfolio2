@@ -1,5 +1,5 @@
 import '../css/project.css'
-import projects, { tabs } from "../data/projectData";
+import { projects, tabs } from '../data/projectData';
 import ProjectCard from './projectCard';
 import { useState, useMemo } from 'react';
 
@@ -10,10 +10,7 @@ export default function Project() {
         if (active === "All")
             return projects;
         return projects.filter(project => project.category === active);
-
     }, [active]);
-
-
 
     return (
         <section id="project">
