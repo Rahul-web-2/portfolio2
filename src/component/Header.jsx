@@ -1,32 +1,29 @@
 import { NAV_LINKS, OWNER_NAME, RESUME_PATH } from "../data/navbarData.js";
-import '../css/navbar.css'
+import '../css/header.css'
 
-export default function Navbar() {
+export default function Header() {
 
     return (
-        <nav>
-            <div className="container">
+        <header className="site-header">
+            <div className="header-container">
 
-                <div className="logo">
+                <div className="header-logo">
                     <h1>{OWNER_NAME}</h1>
                 </div>
 
-                <div className="navbar">
+                <nav aria-label="header-navigation">
                     <ul>
                         {NAV_LINKS.map(({ id, label, href }) => (
                             <li key={id}>
-                                <a
-                                    href={href}
-                                    className={`link-${id}`}
-                                >
+                                <a href={href} className="header-link">
                                     {label}
                                 </a>
                             </li>
                         ))}
                     </ul>
-                </div>
+                </nav>
 
-                <div className="button">
+                <div className="resume-button">
                     <a
                         href={RESUME_PATH}
                         target="_blank"
@@ -39,6 +36,6 @@ export default function Navbar() {
                 </div>
 
             </div>
-        </nav>
+        </header>
     )
 }
