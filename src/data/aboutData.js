@@ -1,9 +1,7 @@
 export const ABOUT = {
   heading: "About Me",
   image: {
-    alt: "A person sitting with a laptop coding, with a code editor window floating behind",
-    width: 500,
-    height: 400,
+    alt: "A person sitting with a laptop coding, with a code editor window floating behind"
   },
   bio: `I'm a Full-Stack Developer skilled in Java, Spring Boot, and React.js, 
         with an M.Tech in Computer Science Engineering. I build scalable web 

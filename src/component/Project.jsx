@@ -34,12 +34,6 @@ export default function Project() {
                     }
                 </div>
 
-                <div className="project-grid">
-                    {filterProject.map(p => (
-                        <ProjectCard key={p.id} project={p} />
-                    ))}
-                </div>
-
             </div>
         </section>
     )
