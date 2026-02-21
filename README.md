@@ -48,14 +48,21 @@
 Follow these steps to run this project locally:
 
 1️⃣ Clone the Repository
+
 git clone https://github.com/Rahul-web-2/portfolio2.git
 
 2️⃣ Go to the Project Folder
+
 cd portfolio2
+
 3️⃣ Install Dependencies
+
 npm install
+
 4️⃣ Start Development Server
+
 npm run dev
+
 📡 Deployment
 
 This project is deployed using Vercel.
