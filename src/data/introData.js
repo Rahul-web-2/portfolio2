@@ -1,4 +1,4 @@
-import github from "../assets/img/Github.png";
+import github from "../assets/img/github.png";
 import linkedin from "../assets/img/linkedin.png";
 
 export const INTRO = {
