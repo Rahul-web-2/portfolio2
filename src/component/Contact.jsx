@@ -1,4 +1,6 @@
 import { ValidationError, useForm } from '@formspree/react';
+import '../css/contact.css'
+
 const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID;
 
 function SuccessMessage({ onReset }) {
@@ -6,9 +8,11 @@ function SuccessMessage({ onReset }) {
         <div className="form-success" role="alert" aria-live="polite">
             <h2>Message Sent!</h2>
             <p>Thank you for reaching out. I'll get back to you soon.</p>
-            <button onClick={onReset} className="btn">
-                Send Another Message
-            </button>
+            <div className='form-success-btn'>
+                <a onClick={onReset} className="btn-send">
+                    Send Another Message
+                </a>
+            </div>
         </div>
     );
 }
@@ -29,14 +33,13 @@ export default function Contact() {
     if (state.succeeded) return <SuccessMessage onReset={reset} />;
 
     return (
-        <section id="contact-me" aria-label="Contact Me">
-            <div className="container">
-
-                <h2>Let's Connect</h2>
+        <section id="contact">
+            <h2 className='contact-heading'>Let's Connect</h2>
+            <div className="contact-container">
 
                 <form
                     onSubmit={handleSubmit}
-                    aria-label="Contact form"
+                    className="Contac-form"
                     noValidate
                 >
                     <div className="form-group">
@@ -97,15 +100,17 @@ export default function Contact() {
                     </div>
 
                     <ValidationError errors={state.errors} />
+                    <div className='contact-button'>
+                        <button
+                            type="submit"
+                            disabled={state.submitting}
+                            aria-busy={state.submitting}
+                            className="send-btn"
+                        >
+                            {state.submitting ? "Sending..." : "Send"}
+                        </button>
+                    </div>
 
-                    <button
-                        type="submit"
-                        disabled={state.submitting}
-                        aria-busy={state.submitting}
-                        className="submit-btn"
-                    >
-                        {state.submitting ? "Sending..." : "Send Message"}
-                    </button>
                 </form>
 
             </div>

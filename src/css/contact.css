@@ -1,0 +1,90 @@
+#contact {
+    margin-top: 85px;
+    padding: 0 16px;
+}
+
+.contact-heading {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group label {
+    display: flex;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.form-group input {
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    width: 400px;
+    height: 40px;
+}
+
+.form-group textarea {
+    border: 0.1rem solid #c9c9c9;
+    border-radius: 8px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    width: 400px;
+    height: 160px;
+}
+
+.contact-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.send-btn {
+    padding: 10px 25px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #6b8e23;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-success {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.form-success-btn {
+    width: fit-content;
+    margin-top: 15px;
+}
+
+.btn-send {
+    padding: 10px 25px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #6b8e23;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
