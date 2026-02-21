@@ -1,3 +1,7 @@
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
+
+
 export const OWNER_NAME = "Rahul Lakhchaura";
 export const CURRENT_YEAR = new Date().getFullYear();
 
@@ -11,12 +15,14 @@ export const NAV_LINKS = [
 export const SOCIAL_LINKS = [
   {
     id: "github",
+    src: github,
     href: "https://github.com/Rahul-web-2",
     alt: "GitHub",
     ariaLabel: "Visit Rahul's GitHub profile (opens in new tab)",
   },
   {
     id: "linkedin",
+    src: linkedin,
     href: "https://www.linkedin.com/in/rahullakhchaura/",
     alt: "LinkedIn",
     ariaLabel: "Visit Rahul's LinkedIn profile (opens in new tab)",

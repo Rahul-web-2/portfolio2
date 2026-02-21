@@ -1,5 +1,5 @@
 import { INTRO, SOCIAL_LINKS } from "../data/introData.js";
-import coding from "../assets/img/Coding.png";
+import coding from "../assets/Coding.png";
 import '../css/intro.css';
 
 

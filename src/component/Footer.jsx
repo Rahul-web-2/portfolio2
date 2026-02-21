@@ -1,12 +1,7 @@
 import { OWNER_NAME, NAV_LINKS, CURRENT_YEAR, SOCIAL_LINKS } from "../data/footerData.js";
-import github from "../assets/img/GitHub.png";
-import linkedin from "../assets/img/linkedin.png";
+
 import "../css/footer.css";
 
-const SOCIALS = [
-    { ...SOCIAL_LINKS[0], src: github },
-    { ...SOCIAL_LINKS[1], src: linkedin },
-];
 export default function Footer() {
     return (
 
@@ -29,7 +24,7 @@ export default function Footer() {
                 </nav>
 
                 <div className="social-media-icon" role="list">
-                    {SOCIALS.map(({ id, href, src, alt, ariaLabel }) => (
+                    {SOCIAL_LINKS.map(({ id, href, src, alt, ariaLabel }) => (
                         <a
                             key={id}
                             href={href}

@@ -1,5 +1,5 @@
-import github from "../assets/img/github.png";
-import linkedin from "../assets/img/linkedin.png";
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
 
 export const INTRO = {
   greeting: "Hi, I am",

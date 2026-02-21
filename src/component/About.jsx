@@ -1,6 +1,6 @@
 import { ABOUT } from "../data/aboutData.js";
 import '../css/about.css'
-import coding2 from "../assets/img/Coding2.png";
+import coding2 from "../assets/Coding2.png";
 
 export default function About() {
     return (

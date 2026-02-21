@@ -1,8 +1,8 @@
-import Portfolio from "../assets/img/portfolio.png";
-import DailyNews from "../assets/img/Daily news.png";
-import TextConveter from "../assets/img/Text-conveter!.png";
-import Onlinebookstore from "../assets/img/Online book store.png";
-import ToDoApp from "../assets/img/To-Do-App.png";
+import Portfolio from "../assets/portfolio.png";
+import DailyNews from "../assets/Daily news.png";
+import TextConveter from "../assets/Text-conveter!.png";
+import Onlinebookstore from "../assets/Online book store.png";
+import ToDoApp from "../assets/To-Do-App.png";
 
 
 export const tabs = ["All", "Full Stack", "Front-end", "UI/UX"];
