@@ -1,13 +1,7 @@
 import { INTRO, SOCIAL_LINKS } from "../data/introData.js";
-import github from "../assets/img/GitHub.png";
-import linkedin from "../assets/img/linkedin.png";
 import coding from "../assets/img/Coding.png";
 import '../css/intro.css';
 
-const SOCIALS = [
-    { ...SOCIAL_LINKS[0], src: github },
-    { ...SOCIAL_LINKS[1], src: linkedin },
-];
 
 export default function Intro() {
 
@@ -48,7 +42,7 @@ export default function Intro() {
                     </div>
 
                     <div className="social-media-icon" role="list" aria-label="Social media links">
-                        {SOCIALS.map(({ id, href, src, alt, ariaLabel }) => (
+                        {SOCIAL_LINKS.map(({ id, href, src, alt, ariaLabel }) => (
                             <a
                                 key={id}
                                 href={href}
