@@ -10,15 +10,13 @@ const SOCIALS = [
 export default function Footer() {
     return (
 
-        <footer className="Site footer">
-
+        <footer className="site-footer">
             <div className="footer-container">
-
-                <div className="logo">
+                <div className="footer-logo">
                     <p className="footer-logo">{OWNER_NAME}</p>
                 </div>
 
-                <nav aria-label="Footer navigation">
+                <nav aria-label="footer-navigation">
                     <ul>
                         {NAV_LINKS.map(({ id, label, href }) => (
                             <li key={id}>
@@ -30,7 +28,7 @@ export default function Footer() {
                     </ul>
                 </nav>
 
-                <div className="social-media-icon" role="list" aria-label="Social media links">
+                <div className="social-media-icon" role="list">
                     {SOCIALS.map(({ id, href, src, alt, ariaLabel }) => (
                         <a
                             key={id}
@@ -40,7 +38,7 @@ export default function Footer() {
                             aria-label={ariaLabel}
                             role="listitem"
                         >
-                            <img src={src} alt={alt} width={32} height={32} />
+                            <img src={src} alt={alt} width={50} height={50} />
                         </a>
                     ))}
                 </div>
