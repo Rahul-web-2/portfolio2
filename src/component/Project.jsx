@@ -13,28 +13,28 @@ export default function Project() {
     }, [active]);
 
     return (
-        <section id="project">
-
-            <div className="container">
-                <h1>Project</h1>
-                <div>
-                    {tabs.map(tab => (
-                        <button
-                            key={tab}
-                            onClick={() => setActive(tab)}
-                            className={`btn ${active === tab ? "active" : ""}`}
-                        >
-                            {tab}
-                        </button>
-                    ))}
-
+        <>
+            <section id="project">
+                <h1 className='project-heading'>Project</h1>
+                <div className="project-container">
+                    <div className='project-button'>
+                        {tabs.map(tab => (
+                            <button
+                                key={tab}
+                                onClick={() => setActive(tab)}
+                                className={`btn ${active === tab ? "active" : ""}`}
+                            >
+                                {tab}
+                            </button>
+                        ))}
+                    </div>
                     {filterProject.length === 0
                         ? <p className="no-projects">Right now no projects found in this category.</p>
                         : filterProject.map(p => <ProjectCard key={p.id} project={p} />)
                     }
                 </div>
+            </section>
+        </>
 
-            </div>
-        </section>
     )
 }
