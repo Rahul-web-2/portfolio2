@@ -26,7 +26,7 @@ export default function Intro() {
 
                     <div className="hire-button">
                         <a
-                            href="#contact-me"
+                            href="#contact"
                             className="hire-btn"
                             role="button"
                         >
