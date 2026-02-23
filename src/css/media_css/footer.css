@@ -1,0 +1,9 @@
+@media (max-width:426px) {
+    .site-footer ul {
+        gap: 26px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+}

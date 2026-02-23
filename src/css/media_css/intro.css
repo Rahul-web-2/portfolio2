@@ -1,5 +1,4 @@
 @media (max-width: 1024px) {
-
     #home {
         justify-content: flex-end;
     }
@@ -14,7 +13,6 @@
 }
 
 @media (max-width: 768px) {
-
     .intro-container {
         gap: 0;
         margin-left: 50px;
@@ -32,7 +30,6 @@
         font-weight: 700;
         line-height: 1.2;
         padding-left: 20px;
-
     }
 
     .hero-role {
@@ -84,17 +81,27 @@
         color: #d5d5d5;
     }
 
-    .social-media-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 18px;
-        margin-top: 20px;
-    }
-
     .coding img {
         width: 300px;
         height: 300px;
     }
+}
 
+@media (max-width: 426px) {
+
+    .intro-container, .hero-right, .intro-social-media-icon{
+        display: block;
+        width: fit-content;
+    }
+
+        #home {
+        justify-content: center;
+    }
+
+.intro-container {
+        margin-left: 0px;
+    }
+    .coding img {
+        display: none;
+    }
 }

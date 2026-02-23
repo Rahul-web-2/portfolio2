@@ -25,3 +25,13 @@
         gap: 0;
     }
 }
+
+@media (max-width: 426px){
+    .about-container{
+        display: block;
+    }
+
+.coding2 img {
+    display: none;
+}
+}

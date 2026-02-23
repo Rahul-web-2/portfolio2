@@ -17,3 +17,10 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+@media (max-width: 426px) {
+    .project-container {
+        margin-left: auto;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}

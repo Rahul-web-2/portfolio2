@@ -40,7 +40,7 @@ export default function Intro() {
                         />
                     </div>
 
-                    <div className="social-media-icon" role="list" aria-label="Social media links">
+                    <div className="intro-social-media-icon" role="list" aria-label="Social media links">
                         {SOCIAL_LINKS.map(({ id, href, src, alt, ariaLabel }) => (
                             <a
                                 key={id}

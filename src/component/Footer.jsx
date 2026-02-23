@@ -1,6 +1,6 @@
 import { OWNER_NAME, NAV_LINKS, CURRENT_YEAR, SOCIAL_LINKS } from "../data/footerData.js";
-
 import "../css/footer.css";
+import '../css/media_css/footer.css'
 
 export default function Footer() {
     return (
@@ -23,7 +23,7 @@ export default function Footer() {
                     </ul>
                 </nav>
 
-                <div className="social-media-icon" role="list">
+                <div className="footer-social-media-icon" role="list">
                     {SOCIAL_LINKS.map(({ id, href, src, alt, ariaLabel }) => (
                         <a
                             key={id}
