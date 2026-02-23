@@ -39,9 +39,7 @@ export default function Contact() {
 
                 <form
                     onSubmit={handleSubmit}
-                    className="Contac-form"
-                    noValidate
-                >
+                    className="Contac-form">
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
                         <input

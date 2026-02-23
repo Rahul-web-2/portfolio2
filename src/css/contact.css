@@ -88,3 +88,9 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+@media(max-width: 426px){
+    .contact-heading{
+        font-size: 40px;
+    }
+}

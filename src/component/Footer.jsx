@@ -11,7 +11,7 @@ export default function Footer() {
                     <p className="footer-logo">{OWNER_NAME}</p>
                 </div>
 
-                <nav aria-label="footer-navigation">
+                <nav className="footer-navigation">
                     <ul>
                         {NAV_LINKS.map(({ id, label, href }) => (
                             <li key={id}>
