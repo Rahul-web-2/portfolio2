@@ -1,0 +1,27 @@
+@media (max-width: 1024px) {
+    .about-heading {
+        font-size: 40px;
+    }
+
+    .about-introduction {
+        font-size: 17px;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 768px) {
+    .coding2 img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-introduction {
+        font-size: 14px;
+    }
+
+    .about-container {
+        gap: 0;
+    }
+}

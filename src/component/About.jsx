@@ -1,6 +1,7 @@
 import { ABOUT } from "../data/aboutData.js";
-import '../css/about.css'
 import coding2 from "../assets/Coding2.png";
+import '../css/about.css'
+import '../css/media_css/about.css'
 
 export default function About() {
     return (
@@ -9,7 +10,7 @@ export default function About() {
             <div className="about-container">
                 <div className="about-left">
 
-                    <div className="about-image">
+                    <div className="coding2">
                         <img
                             src={coding2}
                             alt={ABOUT.image.alt}

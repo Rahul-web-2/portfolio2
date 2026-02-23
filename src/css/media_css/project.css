@@ -1,0 +1,19 @@
+@media (max-width:1024px) {
+    .project-container {
+        margin-left: 25px;
+    }
+
+    .project-heading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:768px) {
+    .project-button {
+        margin: 20px 20px 20px 20px;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
