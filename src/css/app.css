@@ -9,3 +9,9 @@ body {
     color: #ffffff;
     font-family: "Poppins", sans-serif;
 }
+@media(max-width: 426px){
+    #about, #contact, #project, #home, .site-footer{
+        margin-top: 20px;
+    }
+
+}
