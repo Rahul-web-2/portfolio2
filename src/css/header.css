@@ -1,54 +1,85 @@
 .site-header {
     width: 100%;
-    margin: 40px;
+    padding: 20px 0;
 }
 
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.site-header ul {
-    list-style: none;
+.header-navigation {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+}
+
+.header-logo h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
     gap: 34px;
+    margin: 0;
+    padding: 0;
 }
 
 .header-link {
     color: #d5d5d5;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .header-link:hover {
-    color: white;
+    color: #ffffff;
     text-decoration: underline;
 }
 
-.resume-button {
-    display: flex;
+.resume-btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
     width: 150px;
-    height: 50px;
-    background: linear-gradient(to right,
-            #6b8e23 0%,
-            #455b16 50%,
-            #1e280a 100%);
-    transition: 0.3s ease;
-}
-
-.resume-button:hover {
-    transform: scale(1.05);
-}
-
-.resume-btn {
+    height: 48px;
+    border-radius: 10px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 2px;
     color: #d5d5d5;
+    background: linear-gradient(to right, #6b8e23 0%, #455b16 50%, #1e280a 100%);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.resume-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.hamburger {
+    display: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background: #d5d5d5;
+    border-radius: 2px;
+}
+
+.mobile-only {
+    display: none;
 }

@@ -1,0 +1,39 @@
+@media (max-width: 812px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .header-link {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: black;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .mobile-only .resume-btn {
+        width: 100%;
+    }
+}

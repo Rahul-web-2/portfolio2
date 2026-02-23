@@ -1,7 +1,7 @@
 import { INTRO, SOCIAL_LINKS } from "../data/introData.js";
 import coding from "../assets/Coding.png";
 import '../css/intro.css';
-
+import '../css/media_css/intro.css'
 
 export default function Intro() {
 
@@ -28,7 +28,6 @@ export default function Intro() {
                         </a>
                     </div>
                 </div>
-
 
                 <div className="hero-right">
                     <div className="coding">
