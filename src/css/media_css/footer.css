@@ -1,12 +1,12 @@
-@media (max-width:425px) {
+@media (max-width:426px) {
     .site-footer ul {
         gap: 26px;
     }
     .footer-link{
-        font-size:16px ;
+        font-size:15px ;
     }
 
     .copyright {
-        font-size: 8px;
+        font-size: 10px;
     }
 }
