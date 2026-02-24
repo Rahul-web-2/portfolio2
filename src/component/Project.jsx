@@ -3,6 +3,8 @@ import { projects, tabs } from '../data/projectData.js';
 import ProjectCard from './ProjectCard';
 import '../css/project.css'
 import '../css/media_css/project.css'
+import { motion } from "framer-motion";
+import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/animations.js";
 
 export default function Project() {
     const [active, setActive] = useState("All");
@@ -15,27 +17,37 @@ export default function Project() {
 
     return (
         <>
-            <section id="project">
-                <h1 className='project-heading'>Project</h1>
+            <motion.section id="project"
+                variants={stagger}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.1 }}
+            >
+                <motion.h1 className='project-heading' variants={fadeUp}>Project</motion.h1>
 
-                <div className='project-button'>
+                <motion.div className='project-button' variants={fadeUp}>
                     {tabs.map(tab => (
-                        <button
+                        <motion.button
                             key={tab}
                             onClick={() => setActive(tab)}
                             className={`btn ${active === tab ? "active" : ""}`}
                         >
                             {tab}
-                        </button>
+                        </motion.button>
                     ))}
-                </div>
-                <div className="project-container">
+                </motion.div>
+                <motion.div className="project-container"
+                    variants={fadeUp}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.2 }}
+                >
                     {filterProject.length === 0
                         ? <p className="no-projects">Right now no projects found in this category.</p>
                         : filterProject.map(p => <ProjectCard key={p.id} project={p} />)
                     }
-                </div>
-            </section>
+                </motion.div>
+            </motion.section>
         </>
 
     )

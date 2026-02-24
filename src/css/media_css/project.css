@@ -23,4 +23,8 @@
         margin-left: auto;
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+
+    .btn{
+        font-size: 13px;
+    }
 }

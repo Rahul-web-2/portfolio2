@@ -1,11 +1,15 @@
 import PropTypes from "prop-types";
 import '../css/project.css'
+import { motion } from "framer-motion";
 
 export default function ProjectCard({ project }) {
   const { title, category, description, image, alt, link } = project;
 
   return (
-    <article className="project-card">
+    <motion.article className="project-card"
+      whileHover={{ rotate: 10 }}
+      transition={{ duration: 0.5 }}
+    >
       {image && (
         <img
           src={image}
@@ -18,7 +22,7 @@ export default function ProjectCard({ project }) {
 
       <h3>{title}</h3>
 
-      <p className="project-description">{description} 
+      <p className="project-description">{description}
         {link && (
           <a
             href={link}
@@ -32,7 +36,7 @@ export default function ProjectCard({ project }) {
         )}
       </p>
 
-    </article>
+    </motion.article>
   );
 }
 

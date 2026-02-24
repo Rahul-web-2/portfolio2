@@ -3,7 +3,7 @@ import coding from "../assets/Coding.png";
 import '../css/intro.css';
 import '../css/media_css/intro.css'
 import { motion } from "framer-motion";
-import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/introAnimations.js";
+import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/animations.js";
 
 export default function Intro() {
 
@@ -33,7 +33,6 @@ export default function Intro() {
                             href="#contact"
                             className="hire-btn"
                             role="button"
-                            variants={pop}
                         >
                             Hire Me
                         </motion.a>

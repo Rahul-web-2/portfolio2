@@ -1,27 +1,29 @@
 import { ValidationError, useForm } from '@formspree/react';
 import '../css/contact.css'
+import { motion } from "framer-motion";
+import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/animations.js";
 
 const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID;
 
 function SuccessMessage({ onReset }) {
     return (
-        <div className="form-success" role="alert" aria-live="polite">
+        <motion.div className="form-success" role="alert">
             <h2>Message Sent!</h2>
             <p>Thank you for reaching out. I'll get back to you soon.</p>
-            <div className='form-success-btn'>
+            <motion.div className='form-success-btn'>
                 <a onClick={onReset} className="btn-send">
                     Send Another Message
                 </a>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
 
 function ConfigError() {
     return (
-        <div className="form-error" role="alert">
+        <motion.div className="form-error" role="alert">
             Contact form is not configured. Please try again later.
-        </div>
+        </motion.div>
     );
 }
 
@@ -33,14 +35,19 @@ export default function Contact() {
     if (state.succeeded) return <SuccessMessage onReset={reset} />;
 
     return (
-        <section id="contact">
-            <h2 className='contact-heading'>Let's Connect</h2>
-            <div className="contact-container">
+        <motion.section id="contact"
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.1 }}
+        >
+            <h2 className='contact-heading' variants={fadeUp}>Let's Connect</h2>
+            <motion.div className="contact-container" variants={fadeUp}>
 
                 <form
                     onSubmit={handleSubmit}
                     className="Contac-form">
-                    <div className="form-group">
+                    <motion.div className="form-group">
                         <label htmlFor="name">Name</label>
                         <input
                             id="name"
@@ -58,9 +65,9 @@ export default function Contact() {
                             prefix="Name"
                             errors={state.errors}
                         />
-                    </div>
+                    </motion.div>
 
-                    <div className="form-group">
+                    <motion.div className="form-group">
                         <label htmlFor="email">Email</label>
                         <input
                             id="email"
@@ -77,9 +84,9 @@ export default function Contact() {
                             prefix="Email"
                             errors={state.errors}
                         />
-                    </div>
+                    </motion.div>
 
-                    <div className="form-group">
+                    <motion.div className="form-group">
                         <label htmlFor="message">Message</label>
                         <textarea
                             id="message"
@@ -95,10 +102,10 @@ export default function Contact() {
                             prefix="Message"
                             errors={state.errors}
                         />
-                    </div>
+                    </motion.div>
 
                     <ValidationError errors={state.errors} />
-                    <div className='contact-button'>
+                    <motion.div className='contact-button'>
                         <button
                             type="submit"
                             disabled={state.submitting}
@@ -107,11 +114,11 @@ export default function Contact() {
                         >
                             {state.submitting ? "Sending..." : "Send"}
                         </button>
-                    </div>
+                    </motion.div>
 
                 </form>
 
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     );
 }
