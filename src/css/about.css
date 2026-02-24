@@ -8,11 +8,11 @@
 }
 
 .about-container {
-    width: 100%;
-    max-width: 1300px;
+    width: min(1300px, 92%);
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 48px;
 }
 
@@ -29,18 +29,13 @@
 }
 
 .about-heading {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 1.2;
-    letter-spacing: 2px;
-    margin: 0 0 12px;
+    font-size: clamp(28px, 4vw, 48px);
 }
 
 .about-introduction {
-    font-size: 20px;
+    font-size: clamp(14px, 1.5vw, 20px);
     line-height: 1.6;
-    letter-spacing: 0.5px;
-    text-align: justify;
+    text-align: left;
 }
 
 .about-highlights {
@@ -55,4 +50,11 @@
 .highlight-label {
     font-weight: 600;
     margin-right: 8px;
+}
+
+.coding2 img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
 }

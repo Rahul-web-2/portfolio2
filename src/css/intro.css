@@ -7,12 +7,11 @@
 }
 
 .intro-container {
-  width: 100%;
-  max-width: 1200px;
+  width: min(1200px, 92%);
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   gap: 64px;
-  margin-left: 200px;
 }
 
 .hero-left {
@@ -31,7 +30,7 @@
 }
 
 .hero-greeting {
-  font-size: 32px;
+  font-size: clamp(20px, 2.5vw, 32px);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -39,7 +38,7 @@
 }
 
 .hero-name {
-  font-size: 50px;
+  font-size: clamp(30px, 4vw, 50px);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -51,14 +50,14 @@
 }
 
 .hero-role {
-  font-size: 100px;
+ font-size: clamp(48px, 7vw, 100px);
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: 2px;
 }
 
 .hero-role2 {
-  font-size: 75px;
+  font-size: clamp(36px, 6vw, 75px);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: 2px;
@@ -67,7 +66,7 @@
 
 .hero-para,
 .hero-para2 {
-  font-size: 22px; 
+  font-size: clamp(16px, 1.6vw, 22px); 
   line-height: 1.6;
   letter-spacing: 1px;
   max-width: 520px;
