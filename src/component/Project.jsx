@@ -21,7 +21,7 @@ export default function Project() {
                 variants={stagger}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.1 }}
+                viewport={{ once: false, amount: 0.2 }}
             >
                 <motion.h1 className='project-heading' variants={fadeUp}>Project</motion.h1>
 

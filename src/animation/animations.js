@@ -16,10 +16,10 @@ export const fadeUp = {
 };
 
 export const fadeRight = {
- hidden: { opacity: 0, x: 25 },
+ hidden: { opacity: 0, x: 25},
   show: {
     opacity: 1,
-    X: 0,
+    x: 0,
     transition: { duration: 0.6, ease: "easeOut" },
   },
 };
