@@ -2,35 +2,53 @@ import { INTRO, SOCIAL_LINKS } from "../data/introData.js";
 import coding from "../assets/Coding.png";
 import '../css/intro.css';
 import '../css/media_css/intro.css'
+import { motion } from "framer-motion";
+import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/introAnimations.js";
 
 export default function Intro() {
 
     return (
-        <section id="home">
-            <div className="intro-container">
-                <div className="hero-left">
-                    <div className="hero-text">
-                        <p className="hero-greeting">{INTRO.greeting}</p>
-                        <p className="hero-name">{INTRO.name}</p>
-                        <p className="hero-role">{INTRO.role}</p>
-                        <p className="hero-role2">{INTRO.role2}</p>
-                        <p className="hero-para">{INTRO.para}</p>
-                        <p className="hero-para2">{INTRO.para2}</p>
-                    </div>
+        <motion.section id="home"
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+        >
+            <motion.div className="intro-container"
+            >
+                <motion.div className="hero-left"
+                    variants={fadeLeft}
+                >
+                    <motion.div className="hero-text" variants={stagger} initial="hidden" whileInView="show">
+                        <motion.p className="hero-greeting" variants={fadeUp}>{INTRO.greeting}</motion.p>
+                        <motion.p className="hero-name" variants={fadeUp}>{INTRO.name}</motion.p>
+                        <motion.p className="hero-role" variants={fadeUp}>{INTRO.role}</motion.p>
+                        <motion.p className="hero-role2" variants={fadeUp}>{INTRO.role2}</motion.p>
+                        <motion.p className="hero-para" variants={fadeUp}>{INTRO.para}</motion.p>
+                        <motion.p className="hero-para2" variants={fadeUp}>{INTRO.para2}</motion.p>
+                    </motion.div>
 
-                    <div className="hire-button">
-                        <a
+                    <motion.div className="hire-button" variants={stagger} initial="hidden" whileInView="show">
+                        <motion.a
                             href="#contact"
                             className="hire-btn"
                             role="button"
+                            variants={pop}
                         >
                             Hire Me
-                        </a>
-                    </div>
-                </div>
+                        </motion.a>
+                    </motion.div>
+                </motion.div>
 
-                <div className="hero-right">
-                    <div className="coding">
+                <motion.div className="hero-right" variants={fadeRight}>
+                    <motion.div className="coding"
+                        animate={{ y: [0, -20, 0] }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                    >
                         <img
                             src={coding}
                             alt="Developer typing on a keyboard with multiple monitors displaying code"
@@ -38,25 +56,27 @@ export default function Intro() {
                             height={447}
                             loading="lazy"
                         />
-                    </div>
+                    </motion.div>
 
-                    <div className="intro-social-media-icon" role="list" aria-label="Social media links">
+                    <motion.div className="intro-social-media-icon" role="list">
                         {SOCIAL_LINKS.map(({ id, href, src, alt, ariaLabel }) => (
-                            <a
+                            <motion.a
                                 key={id}
                                 href={href}
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label={ariaLabel}
                                 role="listitem"
+                                whileHover={{ rotate: 28 }}
+                                transition={{ duration: 0.3 }}
                             >
                                 <img src={src} alt={alt} width={50} height={50} />
-                            </a>
+                            </motion.a>
                         ))}
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
-            </div>
-        </section>
+            </motion.div>
+        </motion.section >
     )
 }
