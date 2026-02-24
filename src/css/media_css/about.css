@@ -26,12 +26,12 @@
     }
 }
 
-@media (max-width: 426px){
-    .about-container{
+@media (max-width: 426px) {
+    .about-container {
         display: block;
     }
 
-.coding2 img {
-    display: none;
-}
+    .coding2 img {
+        display: none;
+    }
 }
