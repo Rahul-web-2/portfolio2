@@ -1,12 +1,43 @@
-@media (max-width:426px) {
-    .site-footer ul {
-        gap: 26px;
-    }
-    .footer-link{
-        font-size:15px ;
-    }
+/* ── iPad Mini / tablet portrait (≤ 768px) ── */
+/* Allow nav links to wrap instead of overflowing */
+@media (max-width: 768px) {
+  .site-footer ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
 
-    .copyright {
-        font-size: 10px;
-    }
+/* ── Large phones — iPhone 14 Pro Max & below (≤ 480px) ── */
+@media (max-width: 480px) {
+  .site-footer {
+    margin-top: 32px;
+  }
+
+  .site-footer ul {
+    gap: 14px;
+  }
+
+  .footer-link {
+    font-size: 15px;
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+}
+
+/* ── Small phones — iPhone SE (≤ 375px) ── */
+@media (max-width: 375px) {
+  .site-footer {
+    margin-top: 20px;
+  }
+
+  .footer-link {
+    font-size: 13px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
 }

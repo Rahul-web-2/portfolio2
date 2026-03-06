@@ -3,7 +3,7 @@ import coding from "../assets/Coding.png";
 import '../css/intro.css';
 import '../css/media_css/intro.css'
 import { motion } from "framer-motion";
-import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/animations.js";
+import { fadeUp, fadeLeft, fadeRight, stagger } from "../animation/animations.js";
 
 export default function Intro() {
 
@@ -12,7 +12,7 @@ export default function Intro() {
             variants={stagger}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
         >
             <motion.div className="intro-container"
             >

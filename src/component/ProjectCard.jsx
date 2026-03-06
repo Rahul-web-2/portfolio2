@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import '../css/project.css'
 import { motion } from "framer-motion";
-import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/animations.js";
+import { fadeUp } from "../animation/animations.js";
 
 export default function ProjectCard({ project }) {
   const { title, category, description, image, alt, link } = project;
@@ -9,8 +9,8 @@ export default function ProjectCard({ project }) {
   return (
     <motion.article className="project-card"
     variants={fadeUp}
-      whileHover={{ rotate: 10 }}
-      transition={{ duration: 0.5 }}
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.25 }}
     >
       {image && (
         <img

@@ -1,0 +1,62 @@
+/* ── iPad landscape & small laptops (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .contact-heading {
+    font-size: 40px;
+  }
+}
+
+/* ── iPad Mini / tablet portrait (≤ 768px) ── */
+/* Allow form fields to flex with the viewport instead of overflowing */
+@media (max-width: 768px) {
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+}
+
+/* ── Large phones — iPhone 14 Pro Max & below (≤ 480px) ── */
+@media (max-width: 480px) {
+  #contact {
+    margin-top: 32px;
+  }
+
+  .contact-heading {
+    font-size: 36px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .send-btn,
+  .btn-send {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+/* ── Small phones — iPhone SE (≤ 375px) ── */
+@media (max-width: 375px) {
+  #contact {
+    margin-top: 20px;
+  }
+
+  .contact-heading {
+    font-size: 30px;
+  }
+
+  .send-btn,
+  .btn-send {
+    font-size: 16px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  .contact-button {
+    justify-content: center;
+  }
+}

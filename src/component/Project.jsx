@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 import '../css/project.css'
 import '../css/media_css/project.css'
 import { motion } from "framer-motion";
-import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/animations.js";
+import { fadeUp, stagger, scaleIn } from "../animation/animations.js";
 
 export default function Project() {
     const [active, setActive] = useState("All");
@@ -21,16 +21,17 @@ export default function Project() {
                 variants={stagger}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
             >
                 <motion.h1 className='project-heading' variants={fadeUp}>Project</motion.h1>
 
-                <motion.div className='project-button' variants={fadeUp}>
+                <motion.div className='project-button' variants={stagger}>
                     {tabs.map(tab => (
                         <motion.button
                             key={tab}
                             onClick={() => setActive(tab)}
                             className={`btn ${active === tab ? "active" : ""}`}
+                            variants={scaleIn}
                         >
                             {tab}
                         </motion.button>
@@ -40,7 +41,7 @@ export default function Project() {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: false, amount: 0.2 }}
+                    viewport={{ once: true, amount: 0.2 }}
                 >
                     {filterProject.length === 0
                         ? <p className="no-projects">Right now no projects found in this category.</p>

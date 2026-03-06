@@ -35,7 +35,7 @@
 .about-introduction {
     font-size: clamp(14px, 1.5vw, 20px);
     line-height: 1.6;
-    text-align: left;
+    text-align: justify;
 }
 
 .about-highlights {

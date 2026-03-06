@@ -1,108 +1,83 @@
+/* ── iPad landscape & small laptops (≤ 1024px) ── */
 @media (max-width: 1024px) {
-    #home {
-        justify-content: flex-end;
-    }
-
-    .hero-name {
-        font-size: 38px;
-    }
-
-    .hero-role {
-        font-size: 81px;
-    }
+  .intro-container {
+    gap: 40px;
+  }
 }
 
+/* ── iPad Mini / tablet portrait (≤ 768px) ── */
+/* Stack hero to single column and center content */
 @media (max-width: 768px) {
-    .intro-container {
-        gap: 0;
-        margin-left: 50px;
-    }
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
 
-    .hero-greeting {
-        font-size: 25px;
-        font-weight: 400;
-        line-height: 1.2;
-        letter-spacing: 3px;
-    }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .hero-name {
-        font-size: 35px;
-        font-weight: 700;
-        line-height: 1.2;
-        padding-left: 20px;
-    }
+  /* Remove left-indent that looks odd when centered */
+  .hero-name {
+    padding-left: 0;
+  }
 
-    .hero-role {
-        font-weight: 600;
-        font-size: 56px;
-        line-height: 1;
-        letter-spacing: 2px;
-    }
+  .hero-role2 {
+    text-align: center;
+  }
 
-    .hero-role2 {
-        font-weight: 600;
-        font-size: 46px;
-        line-height: 1;
-        letter-spacing: 2px;
-        text-align: end;
-    }
-
-    .hero-para,
-    .hero-para2 {
-        font-size: 20px;
-        line-height: 1.6;
-        letter-spacing: 1px;
-        max-width: 520px;
-        margin-top: 12px;
-    }
-
-    .hire-button {
-        margin-top: 22px;
-        width: 160px;
-        height: 52px;
-        border-radius: 10px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(to right, #6b8e23 0%, #455b16 50%, #1e280a 100%);
-        transition: transform 0.2s ease;
-    }
-
-    .hire-button:hover {
-        transform: scale(1.05);
-    }
-
-    .hire-btn {
-        text-decoration: none;
-        font-size: 18px;
-        letter-spacing: 2px;
-        color: #d5d5d5;
-    }
-
-    .coding img {
-        width: 300px;
-        height: 300px;
-    }
+  .coding img {
+    width: 260px;
+    height: 260px;
+  }
 }
 
-@media (max-width: 426px) {
+/* ── Large phones — iPhone 14 Pro Max & below (≤ 480px) ── */
+@media (max-width: 480px) {
+  #home {
+    min-height: auto;
+    margin-top: 32px;
+  }
 
-    .intro-container,
-    .hero-right,
-    .intro-social-media-icon {
-        display: block;
-        width: fit-content;
-    }
+  .intro-container {
+    gap: 16px;
+  }
 
-    #home {
-        justify-content: center;
-    }
+  /* Hide image to give full width to text on phones */
+  .coding {
+    display: none;
+  }
 
-    .intro-container {
-        margin-left: 0px;
-    }
+  .intro-social-media-icon {
+    justify-content: center;
+  }
 
-    .coding img {
-        display: none;
-    }
+  .hire-button {
+    width: 150px;
+    height: 48px;
+  }
+}
+
+/* ── Small phones — iPhone SE (≤ 375px) ── */
+@media (max-width: 375px) {
+  #home {
+    margin-top: 20px;
+  }
+
+  .hire-button {
+    width: 136px;
+    height: 44px;
+  }
+
+  .hire-btn {
+    font-size: 15px;
+  }
+
+  .intro-social-media-icon {
+    gap: 12px;
+  }
 }

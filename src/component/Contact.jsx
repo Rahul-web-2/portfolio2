@@ -1,7 +1,8 @@
 import { ValidationError, useForm } from '@formspree/react';
 import '../css/contact.css'
+import '../css/media_css/contact.css'
 import { motion } from "framer-motion";
-import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/animations.js";
+import { fadeUp, stagger } from "../animation/animations.js";
 
 const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID;
 
@@ -11,9 +12,9 @@ function SuccessMessage({ onReset }) {
             <h2>Message Sent!</h2>
             <p>Thank you for reaching out. I'll get back to you soon.</p>
             <motion.div className='form-success-btn'>
-                <a onClick={onReset} className="btn-send">
+                <button onClick={onReset} className="btn-send">
                     Send Another Message
-                </a>
+                </button>
             </motion.div>
         </motion.div>
     );
@@ -39,9 +40,9 @@ export default function Contact() {
             variants={stagger}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
         >
-            <h2 className='contact-heading' variants={fadeUp}>Let's Connect</h2>
+            <motion.h2 className='contact-heading' variants={fadeUp}>Let's Connect</motion.h2>
             <motion.div className="contact-container" variants={fadeUp}>
 
                 <form

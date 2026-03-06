@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NAV_LINKS, OWNER_NAME, RESUME_PATH } from "../data/navbarData.js";
 import "../css/header.css";
-import '../css/media_css/header.css'
+import '../css/media_css/header.css';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,6 @@ export default function Header() {
     return (
         <header className="site-header">
             <div className="header-container">
-
                 <nav className="header-navigation">
 
                     <div className="header-logo">
@@ -73,8 +72,8 @@ export default function Header() {
                             Resume
                         </a>
                     </div>
-                </nav>
 
+                </nav>
             </div>
         </header>
     );

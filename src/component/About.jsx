@@ -3,7 +3,7 @@ import coding2 from "../assets/Coding2.png";
 import '../css/about.css'
 import '../css/media_css/about.css'
 import { motion } from "framer-motion";
-import { fadeUp, fadeLeft, fadeRight, pop, stagger } from "../animation/animations.js";
+import { fadeUp, fadeLeft, fadeRight, stagger } from "../animation/animations.js";
 
 export default function About() {
     return (
@@ -12,7 +12,7 @@ export default function About() {
             variants={stagger}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
         >
             <motion.div className="about-container">
                 <motion.div className="about-left" variants={fadeLeft}>
@@ -36,7 +36,7 @@ export default function About() {
                 </motion.div>
 
                 <motion.div className="about-right" variants={fadeRight}>
-                    <h2 className="about-heading" variants={fadeUp}>{ABOUT.heading}</h2>
+                    <motion.h2 className="about-heading" variants={fadeUp}>{ABOUT.heading}</motion.h2>
                     <motion.div className="about-introduction" variants={stagger}>
                         <motion.p variants={fadeUp}>{ABOUT.bio}</motion.p>
 

@@ -1,50 +1,65 @@
+import { motion } from "framer-motion";
 import { OWNER_NAME, NAV_LINKS, CURRENT_YEAR, SOCIAL_LINKS } from "../data/footerData.js";
 import "../css/footer.css";
-import '../css/media_css/footer.css'
+import '../css/media_css/footer.css';
+import { stagger, navStagger, fadeUp, pop } from "../animation/animations.js";
 
 export default function Footer() {
     return (
-
-        <footer className="site-footer">
+        <motion.footer
+            className="site-footer"
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+        >
             <div className="footer-container">
-                <div className="footer-logo">
-                    <p className="footer-logo">{OWNER_NAME}</p>
-                </div>
 
-                <nav className="footer-navigation">
-                    <ul>
+                <motion.div className="footer-logo" variants={fadeUp}>
+                    <p className="footer-logo">{OWNER_NAME}</p>
+                </motion.div>
+
+                <motion.nav className="footer-navigation" variants={navStagger}>
+                    <motion.ul variants={navStagger}>
                         {NAV_LINKS.map(({ id, label, href }) => (
-                            <li key={id}>
+                            <motion.li key={id} variants={fadeUp}>
                                 <a href={href} className="footer-link">
                                     {label}
                                 </a>
-                            </li>
+                            </motion.li>
                         ))}
-                    </ul>
-                </nav>
+                    </motion.ul>
+                </motion.nav>
 
-                <div className="footer-social-media-icon" role="list">
+                <motion.div
+                    className="footer-social-media-icon"
+                    role="list"
+                    variants={stagger}
+                >
                     {SOCIAL_LINKS.map(({ id, href, src, alt, ariaLabel }) => (
-                        <a
+                        <motion.a
                             key={id}
                             href={href}
                             target="_blank"
                             rel="noreferrer"
                             aria-label={ariaLabel}
                             role="listitem"
+                            variants={pop}
+                            whileHover={{ rotate: 28 }}
+                            transition={{ duration: 0.3 }}
                         >
                             <img src={src} alt={alt} width={50} height={50} />
-                        </a>
+                        </motion.a>
                     ))}
-                </div>
+                </motion.div>
 
-                <div className="copyright">
+                <motion.div className="copyright" variants={fadeUp}>
                     <span>
                         Copyright &copy; {CURRENT_YEAR} · All rights reserved · Designed by {OWNER_NAME}
                     </span>
-                </div>
+                </motion.div>
 
             </div>
-        </footer>
+        </motion.footer>
     );
 }
