@@ -1,17 +1,15 @@
 import PropTypes from "prop-types";
 import "../css/project.css";
 import { motion } from "framer-motion";
-import { fadeUp } from "../animation/animations.js";
 
 export default function ProjectCard({ project }) {
-  const { title, category, description, image, alt, link } = project;
+  const { title, description, image, alt, link } = project;
 
   return (
     <motion.article
       className="project-card"
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25 }}
-      onClick={() => link && window.open(link, "_blank")}
     >
       {image && (
         <img
@@ -20,27 +18,22 @@ export default function ProjectCard({ project }) {
           loading="lazy"
         />
       )}
-
-      <span className="project-category">{category}</span>
-
       <h3>{title}</h3>
 
-      <p className="project-description">
-        {description}
-
+      <div className="project-card-overlay">
+        <p>{description}</p>
         {link && (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="project-link"
-            aria-label={`Read more about ${title} (opens in new tab)`}
-            onClick={(e) => e.stopPropagation()}
+            className="project-overlay-link"
+            aria-label={`View ${title} project (opens in new tab)`}
           >
-            Read more
+            View Project
           </a>
         )}
-      </p>
+      </div>
     </motion.article>
   );
 }

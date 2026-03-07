@@ -9,34 +9,51 @@ html {
 }
 
 body {
-    background-color: #2A2A2A;
+    background-color: #111111;
     color: #ffffff;
     font-family: "Poppins", sans-serif;
+    color-scheme: dark;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #6b8e23;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8ab52c;
+}
+
 /* ── iPad landscape & small laptops (≤ 1024px) ── */
 @media (max-width: 1024px) {
-  #about, #contact, #project, #home, .site-footer {
+  #about, #contact, #project, #home, #skills, .site-footer {
     margin-top: 64px;
   }
 }
 
 /* ── iPad Mini / tablet portrait (≤ 768px) ── */
 @media (max-width: 768px) {
-  #about, #contact, #project, #home, .site-footer {
+  #about, #contact, #project, #home, #skills, .site-footer {
     margin-top: 48px;
   }
 }
 
 /* ── Large phones (≤ 480px) ── */
 @media (max-width: 480px) {
-  #about, #contact, #project, #home, .site-footer {
+  #about, #contact, #project, #home, #skills, .site-footer {
     margin-top: 32px;
   }
 }
 
 /* ── Small phones — iPhone SE (≤ 375px) ── */
 @media (max-width: 375px) {
-  #about, #contact, #project, #home, .site-footer {
+  #about, #contact, #project, #home, #skills, .site-footer {
     margin-top: 20px;
   }
 }

@@ -1,0 +1,38 @@
+/* ── iPad landscape & small laptops (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ── iPad Mini / tablet portrait (≤ 768px) ── */
+@media (max-width: 768px) {
+  .skills-heading {
+    font-size: 40px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* ── Large phones (≤ 480px) ── */
+@media (max-width: 480px) {
+  .skills-heading {
+    font-size: 32px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ── Small phones — iPhone SE (≤ 375px) ── */
+@media (max-width: 375px) {
+  .skills-heading {
+    font-size: 28px;
+  }
+}

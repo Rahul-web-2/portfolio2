@@ -18,7 +18,10 @@
     left: 0;
     right: 0;
 
-    background: black;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     flex-direction: column;
 
     border-radius: 12px;
