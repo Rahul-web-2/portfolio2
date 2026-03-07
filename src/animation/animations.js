@@ -82,6 +82,15 @@ export const scaleIn = {
   },
 };
 
+export const barFill = {
+  hidden: { width: "0%", opacity: 0 },
+  show: (level) => ({
+    width: `${level}%`,
+    opacity: 1,
+    transition: { duration: 1.0, ease: "easeOut", delay: 0.1 },
+  }),
+};
+
 export const panelVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.97 },
   show: {

@@ -45,7 +45,7 @@ export const FAQ = [
   {
     id: "education",
     keywords: ["education", "degree", "mtech", "m.tech", "university", "study", "qualification", "college"],
-    response: "Rahul holds an M.Tech in Computer Science Engineering.",
+    response: "Rahul holds an M.Tech/B.Tech in Computer Science Engineering.",
   },
   {
     id: "frontend",

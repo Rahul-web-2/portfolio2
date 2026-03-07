@@ -45,6 +45,10 @@
 .copyright {
     width: 100%;
     text-align: center;
-    background-color: black;
-    color: white;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    background: transparent;
+    margin-top: 24px;
 }
