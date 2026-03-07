@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import "../css/project.css";
 import { motion } from "framer-motion";
-import { fadeUp } from "../animation/animations.js";
 
 export default function ProjectCard({ project }) {
   const { title, category, description, image, alt, link } = project;
