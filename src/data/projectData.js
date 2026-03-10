@@ -3,6 +3,7 @@ import DailyNews from "../assets/Daily news.png";
 import TextConveter from "../assets/Text-conveter!.png";
 import Onlinebookstore from "../assets/Online book store.png";
 import ToDoApp from "../assets/To-Do-App.png";
+import TaskBridge from "../assets/Task-Bridge.png"
 
 
 export const tabs = ["All", "Full Stack", "Front-end", "UI/UX"];
@@ -16,7 +17,7 @@ export const projects = [
         category: "Front-end",
         image: Portfolio,
         alt: "Photo of the Portfolio website",
-        link: "https://github.com/Rahul-web-2/portfolio/blob/main/README.md",
+        link: "https://portfolio2-puce-nu-84.vercel.app/",
     },
 
     {
@@ -46,7 +47,7 @@ export const projects = [
         id: 4,
         title: "To-Do-App",
         description:
-            "Task Management Web App is a Spring Boot full-stack project using Thymeleaf and H2, enabling add, edit, delete, and complete tasks with MVC and standard web technologies.",
+            "To-Do Web App is a Spring Boot full-stack project using Thymeleaf and H2, enabling add, edit, delete, and complete tasks with MVC and standard web technologies.",
         category: "Full Stack",
         image: ToDoApp,
         alt: "Photo of the To-Do App website",
@@ -61,7 +62,18 @@ export const projects = [
             "This project allows users to manipulate text using multiple features like case conversion, formatting, cleanup, and analysis. Built with Reactjs and CSS for interactive UI.",
         category: "Front-end",
         image: TextConveter,
-        alt: "",
-        link: "https://github.com/Rahul-web-2/Text-conveter/blob/main/README.md",
+        alt: "Photo of the Text Conveter website",
+        link: "https://text-conveter.vercel.app/",
+    },
+
+    {
+        id: 6,
+        title: "TaskBridge",
+        description:
+            "TaskBridge is a full-stack task management web app built with React, Spring Boot, and MySQL that lets users create, update, delete, and track tasks efficiently.",
+        category: "Full Stack",
+        image: TaskBridge,
+        alt: "Photo of the Task Bridge website",
+        link: "https://task-management-system-fe-psi.vercel.app/",
     }
 ];
