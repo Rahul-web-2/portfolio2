@@ -32,4 +32,14 @@ export const skillCategories = [
       { id: "mysqlworkbench", name: "Mysql Workbench", level: 100 }
     ],
   },
+
+  {
+    id: "AI",
+    label: "AI Tools",
+    skills: [
+      { id: "chatgpt", name: "ChatGPT", level: 85 },
+      {id: "anthropic", name: "Anthropic Claude AI", level: 85},
+      { id: "githubcopilot", name: "GitHub Copilot", level: 85 }
+    ]
+  }
 ];
